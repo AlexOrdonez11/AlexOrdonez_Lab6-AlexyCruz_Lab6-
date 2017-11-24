@@ -53,7 +53,7 @@ public class Universo {
         return super.toString(); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void Guardar(String raza, String planeta, int max_anios, int ki) throws IOException {
+    public void Guardar() throws IOException {
         File f = null;
         BufferedWriter bw = null;
         FileWriter fw = null;
@@ -61,8 +61,27 @@ public class Universo {
             f = new File("./Universos/" + Nombre + ".txt");
             fw = new FileWriter(f, false);
             bw = new BufferedWriter(fw);
-            bw.write(raza + "|" + planeta + "|" + max_anios + "|" + ki + "|");
-            bw.newLine();
+            for (Ser_Vivo sere : seres) {
+                bw.write(sere.getRaza()+"|"+sere.getPlaneta()+"|"+sere.getMax_anios()+"|"+sere.getKi()+"|");
+                bw.newLine();
+            }
+            bw.flush();
+        } catch (Exception e) {
+
+        }
+        bw.close();
+        fw.close();
+    }
+    public void Escribir(File f) throws IOException{
+        BufferedWriter bw = null;
+        FileWriter fw = null;
+        try {
+            fw = new FileWriter(f, false);
+            bw = new BufferedWriter(fw);
+            for (Ser_Vivo sere : seres) {
+                bw.write(sere.getRaza()+"|"+sere.getPlaneta()+"|"+sere.getMax_anios()+"|"+sere.getKi()+"|");
+                bw.newLine();
+            }
             bw.flush();
         } catch (Exception e) {
 

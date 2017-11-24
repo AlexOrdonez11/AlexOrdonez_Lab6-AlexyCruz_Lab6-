@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFileChooser;
 
 /*
@@ -13,7 +14,6 @@ import javax.swing.JFileChooser;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Alex Ordonez
@@ -64,11 +64,23 @@ public class God_Pad extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         j_ag_raza = new javax.swing.JTextField();
         j_ag_planet = new javax.swing.JTextField();
-        j_cr_anios1 = new javax.swing.JTextField();
-        j_cr_ki1 = new javax.swing.JTextField();
+        j_ag_anios = new javax.swing.JTextField();
+        j_ag_ki = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        j_mo_raza = new javax.swing.JTextField();
+        j_mo_planet = new javax.swing.JTextField();
+        j_mo_anios = new javax.swing.JTextField();
+        j_mo_ki = new javax.swing.JTextField();
+        jButton7 = new javax.swing.JButton();
+        seres_ar = new javax.swing.JComboBox<>();
         jPanel7 = new javax.swing.JPanel();
+        seres_ar1 = new javax.swing.JComboBox<>();
+        jButton8 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
@@ -289,8 +301,8 @@ public class God_Pad extends javax.swing.JFrame {
                                     .addComponent(jLabel10))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(j_cr_anios1, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                                    .addComponent(j_cr_ki1)))))
+                                    .addComponent(j_ag_anios, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                                    .addComponent(j_ag_ki)))))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(116, 116, 116)
                         .addComponent(jButton6)))
@@ -310,11 +322,11 @@ public class God_Pad extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(j_cr_anios1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(j_ag_anios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(j_cr_ki1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(j_ag_ki, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addComponent(jButton6)
                 .addGap(64, 64, 64))
@@ -322,28 +334,104 @@ public class God_Pad extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Agregar mas Seres", jPanel5);
 
+        jLabel11.setText("Raza");
+
+        jLabel12.setText("Planeta");
+
+        jLabel13.setText("maximo de anios");
+
+        jLabel14.setText("Ki");
+
+        jButton7.setText("Modificar");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 436, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(163, 163, 163)
+                        .addComponent(jButton7))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(j_mo_ki, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(j_mo_planet, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(j_mo_anios, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(j_mo_raza, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(117, 117, 117)
+                        .addComponent(seres_ar, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 425, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(seres_ar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(j_mo_raza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(j_mo_planet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12))
+                .addGap(44, 44, 44)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(j_mo_anios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(j_mo_ki, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addComponent(jButton7)
+                .addGap(40, 40, 40))
         );
 
         jTabbedPane2.addTab("Modificar", jPanel6);
+
+        jButton8.setText("Borrar");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 436, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addComponent(seres_ar1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(193, Short.MAX_VALUE)
+                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(136, 136, 136))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 425, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(seres_ar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(110, 110, 110)
+                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(173, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Borrar", jPanel7);
@@ -415,19 +503,16 @@ public class God_Pad extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        Universo_Actual=new Universo(j_nombreuni_cr.getText(),new ArrayList());
+        Universo_Actual = new Universo(j_nombreuni_cr.getText(), new ArrayList());
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        Universo_Actual.getSeres().add(new Ser_Vivo(j_cr_raza.getText(),j_cr_planet.getText(),Integer.parseInt(j_cr_anios.getText()),Integer.parseInt(j_cr_ki.getText())));
+        Universo_Actual.getSeres().add(new Ser_Vivo(j_cr_raza.getText(), j_cr_planet.getText(), Integer.parseInt(j_cr_anios.getText()), Integer.parseInt(j_cr_ki.getText())));
     }//GEN-LAST:event_jButton1MouseClicked
-    int cont=0;
+    int cont = 0;
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
         try {
-            for (Ser_Vivo v : Universo_Actual.getSeres()) {
-                Universo_Actual.Guardar(v.getRaza(),v.getPlaneta(),v.getMax_anios(),v.getMax_anios());
-            }
-            
+            Universo_Actual.Guardar();
         } catch (IOException ex) {
             Logger.getLogger(God_Pad.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -445,24 +530,80 @@ public class God_Pad extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        Universo_Actual.getSeres().add(new Ser_Vivo())
+        Universo_Actual.getSeres().add(new Ser_Vivo(j_ag_raza.getText(), j_ag_planet.getText(), Integer.parseInt(j_ag_anios.getText()), Integer.parseInt(j_ag_ki.getText())));
+        try {
+            Universo_Actual.Escribir(f);
+        } catch (IOException ex) {
+            Logger.getLogger(God_Pad.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        FileReader fr=null;
-        BufferedReader br=null;
-        File f=null;
+        FileReader fr = null;
+        BufferedReader br = null;
         try {
-            JFileChooser jfc=new JFileChooser();
-            int seleccion=jfc.showOpenDialog(this);
-            if (seleccion==JFileChooser.APPROVE_OPTION) {
-                f=jfc.getSelectedFile();
-                Universo_Actual=new Universo(f.getName(),new ArrayList());
+            JFileChooser jfc = new JFileChooser();
+            int seleccion = jfc.showOpenDialog(this);
+            if (seleccion == JFileChooser.APPROVE_OPTION) {
+                f = jfc.getSelectedFile();
+                Universo_Actual = new Universo(f.getName(), new ArrayList());
                 Universo_Actual.Abrir(f);
+                DefaultComboBoxModel m = (DefaultComboBoxModel) seres_ar.getModel();
+                for (Ser_Vivo v : Universo_Actual.getSeres()) {
+                    m.addElement(v);
+                }
+                seres_ar.setModel(m);
+                DefaultComboBoxModel n = (DefaultComboBoxModel) seres_ar1.getModel();
+                for (Ser_Vivo v : Universo_Actual.getSeres()) {
+                    n.addElement(v);
+                }
+                seres_ar1.setModel(n);
             }
         } catch (Exception e) {
         }
     }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        Ser_Vivo x = (Ser_Vivo) seres_ar.getSelectedItem();
+        Ser_Vivo y = (Ser_Vivo) seres_ar1.getSelectedItem();
+        for (Ser_Vivo k : Universo_Actual.getSeres()) {
+            if (x.equals(k)) {
+                k.setRaza(j_mo_raza.getText());
+                k.setPlaneta(j_mo_planet.getText());
+                k.setMax_anios(Integer.parseInt(j_mo_anios.getText()));
+                k.setKi(Integer.parseInt(j_mo_ki.getText()));
+            }
+        }
+        x.setRaza(j_mo_raza.getText());
+        x.setPlaneta(j_mo_planet.getText());
+        x.setMax_anios(Integer.parseInt(j_mo_anios.getText()));
+        x.setKi(Integer.parseInt(j_mo_ki.getText()));
+        y.setRaza(j_mo_raza.getText());
+        y.setPlaneta(j_mo_planet.getText());
+        y.setMax_anios(Integer.parseInt(j_mo_anios.getText()));
+        y.setKi(Integer.parseInt(j_mo_ki.getText()));
+        try {
+            Universo_Actual.Escribir(f);
+        } catch (IOException ex) {
+            Logger.getLogger(God_Pad.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            Universo_Actual.Escribir(f);
+        } catch (IOException ex) {
+            Logger.getLogger(God_Pad.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        Ser_Vivo x=(Ser_Vivo)seres_ar1.getSelectedItem();
+        DefaultComboBoxModel n = (DefaultComboBoxModel) seres_ar1.getModel();
+        n.removeElement(x);
+        seres_ar1.setModel(n);
+        n=(DefaultComboBoxModel)seres_ar.getModel();
+        n.removeElement(x);
+        seres_ar.setModel(n);
+        Universo_Actual.getSeres().remove(x);
+    }//GEN-LAST:event_jButton8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -506,10 +647,16 @@ public class God_Pad extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -527,15 +674,22 @@ public class God_Pad extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTextField j_ag_anios;
+    private javax.swing.JTextField j_ag_ki;
     private javax.swing.JTextField j_ag_planet;
     private javax.swing.JTextField j_ag_raza;
     private javax.swing.JTextField j_cr_anios;
-    private javax.swing.JTextField j_cr_anios1;
     private javax.swing.JTextField j_cr_ki;
-    private javax.swing.JTextField j_cr_ki1;
     private javax.swing.JTextField j_cr_planet;
     private javax.swing.JTextField j_cr_raza;
+    private javax.swing.JTextField j_mo_anios;
+    private javax.swing.JTextField j_mo_ki;
+    private javax.swing.JTextField j_mo_planet;
+    private javax.swing.JTextField j_mo_raza;
     private javax.swing.JTextField j_nombreuni_cr;
+    private javax.swing.JComboBox<String> seres_ar;
+    private javax.swing.JComboBox<String> seres_ar1;
     // End of variables declaration//GEN-END:variables
+    File f;
     Universo Universo_Actual;
 }
