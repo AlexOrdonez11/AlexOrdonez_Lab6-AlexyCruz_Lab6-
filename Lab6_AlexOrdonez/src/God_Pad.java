@@ -84,6 +84,7 @@ public class God_Pad extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
 
         jButton2.setText("Crear Universo");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -454,6 +455,7 @@ public class God_Pad extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton3.setText("Guardar Universo");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -461,6 +463,7 @@ public class God_Pad extends javax.swing.JFrame {
                 jButton3MouseClicked(evt);
             }
         });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 195, 163, 76));
 
         jButton4.setText("Abrir Universo");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -468,36 +471,16 @@ public class God_Pad extends javax.swing.JFrame {
                 jButton4MouseClicked(evt);
             }
         });
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 195, 155, 76));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 102));
         jLabel6.setText("God Pad");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 55, 148, 51));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(190, 190, 190)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(90, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(236, 236, 236))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(89, 89, 89)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(240, Short.MAX_VALUE))
-        );
+        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\Alex Ordonez\\Pictures\\Camera Roll\\goku.jpg")); // NOI18N
+        jLabel15.setText("jLabel15");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 6, 640, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -657,6 +640,7 @@ public class God_Pad extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
