@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import javafx.stage.FileChooser;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 
@@ -59,6 +60,12 @@ public class Universo {
         FileWriter fw = null;
         try {
             f = new File("./Universos/" + Nombre + ".txt");
+            JFileChooser fc=new JFileChooser();
+            fc.setSelectedFile(f);
+            int seleccion=fc.showSaveDialog(null);
+            if(seleccion==JFileChooser.APPROVE_OPTION){
+                f=fc.getSelectedFile();
+            }
             fw = new FileWriter(f, false);
             bw = new BufferedWriter(fw);
             for (Ser_Vivo sere : seres) {
